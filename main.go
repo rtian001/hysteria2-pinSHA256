@@ -4,7 +4,6 @@ import (
 	"context"
 	"crypto/sha256"
 	"crypto/tls"
-	"encoding/base64"
 	"fmt"
 	"os"
 	"time"

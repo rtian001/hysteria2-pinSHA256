@@ -43,20 +43,9 @@ func main() {
 	}
 
 	leaf := certs[0]
-	fmt.Printf("\n── 叶证书（leaf）──\n")
-	fmt.Printf("  Subject : %s\n", leaf.Subject.CommonName)
-	fmt.Printf("  Issuer  : %s\n", leaf.Issuer.CommonName)
-	fmt.Printf("  有效期  : %s → %s\n",
-		leaf.NotBefore.Format("2006-01-02"),
-		leaf.NotAfter.Format("2006-01-02"),
-	)
-
 	certDER := leaf.Raw
 	hash := sha256.Sum256(certDER)
 	pinHex := fmt.Sprintf("%x", hash)
-	pinB64 := base64.StdEncoding.EncodeToString(hash[:])
-
-	fmt.Printf("  pinSHA256 (hex)   : %s\n", pinHex)
-	fmt.Printf("  pinSHA256 (base64): %s\n", pinB64)
+	fmt.Printf(pinHex)
 
 }

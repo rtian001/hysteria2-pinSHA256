@@ -28,7 +28,7 @@ func main() {
 	defer cancel()
 	conn, err := quic.DialAddr(ctx, addr, tlsConf, &quic.Config{})
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "连接失败: %v\n", err)
+		fmt.Printf("ERROR")
 		os.Exit(1)
 	}
 	defer conn.CloseWithError(0, "")
@@ -36,7 +36,7 @@ func main() {
 	state := conn.ConnectionState().TLS
 	certs := state.PeerCertificates
 	if len(certs) == 0 {
-		fmt.Fprintln(os.Stderr, "未收到证书")
+		fmt.Printf("ERROR")
 		os.Exit(1)
 	}
 

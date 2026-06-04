@@ -1,6 +1,7 @@
 name: Build and Release
 
 on:
+  push:
   release:
     types: [created]
   workflow_dispatch:
@@ -39,4 +40,5 @@ jobs:
       - name: Upload to Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: latest
           files: hy2-pinsha256*

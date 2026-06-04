@@ -18,6 +18,15 @@ jobs:
           - goos: freebsd
             goarch: amd64
             suffix: ""
+          - goos: windows
+            goarch: amd64
+            suffix: .exe
+          - goos: linux
+            goarch: amd64
+            suffix: ""
+          - goos: linux
+            goarch: arm64
+            suffix: ""
 
     steps:
       - name: Checkout

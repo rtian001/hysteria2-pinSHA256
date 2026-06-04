@@ -1,4 +1,4 @@
-module hy2-pin-tool
+module hy2-pinsha256
 
 go 1.21
 

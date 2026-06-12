@@ -6,7 +6,7 @@ bash <(curl -s https://128877.xyz/sha256.sh)
 ```
 调用
 ```
-https://xxx.serv00.net/sha256.php?1.1.1.1:0
+https://webapi.serv00.net/sha256.php?1.1.1.1:0
 ```
 返回结果
 ```

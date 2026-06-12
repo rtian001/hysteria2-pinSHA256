@@ -9,8 +9,11 @@ bash <(curl -s https://128877.xyz/sha256.sh)
 https://webapi.serv00.net/sha256.php?1.1.1.1:0
 ```
 返回结果
-```
+```bash
+#不带查询字符串时
+ERROR!请输入IP和端口号<   ?IP:PORT   >
+#主机不通时
 ERROR
-# 或 sha256
+#正常返回：固定证书的sha256
 b4f7bc5565fea3521dbf040e143b065c6f9bbd85d62d8f90e7494d2eadda899c
 ```

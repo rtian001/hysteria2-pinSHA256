@@ -1,5 +1,11 @@
 # hysteria2-pinSHA256
 
+## *自己的服务器可以根据证书文件计算pinSha256
+```bash
+openssl x509 -noout -fingerprint -sha256 -in YOUR_CERT.crt|sed 's/.*=//;s/://g'
+```
+
+
 ## Sev00、Ct8直接部署
 ```bash
 bash <(curl -s https://128877.xyz/sha256.sh)
